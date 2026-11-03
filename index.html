@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="theme-color" content="#17130f" />
+  <title>Chùa An Nhiên — Đi chùa online</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div id="game"></div>
+  <div class="vignette"></div>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">☸</span><div><b>CHÙA AN NHIÊN</b><small>KHÔNG GIAN TĨNH TÂM TRỰC TUYẾN</small></div></div>
+    <div class="stats"><span>🪷 <b id="lotus">12</b></span><span>✨ <b id="merit">0</b> công đức</span><span class="online"><i></i> <b id="online">38</b> đang tham dự</span></div>
+    <button class="icon-btn" id="soundBtn" title="Bật/tắt âm thanh">♫</button>
+  </header>
+
+  <div class="location"><span>⌖</span> CHÍNH ĐIỆN <small>•</small> KHU VỰC 04</div>
+  <div class="welcome" id="welcome">🙏 Chào mừng bạn đến với Chùa An Nhiên</div>
+  <div class="hint" id="hint">W A S D / ↑ ↓ ← → để di chuyển <span>•</span> Kéo chuột để xoay góc nhìn</div>
+
+  <aside class="left-panel">
+    <div class="panel-title"><span>☼</span> HÀNH TRÌNH AN NHIÊN</div>
+    <div class="profile"><div class="avatar-icon">🧘</div><div><b id="playerName">Thiện Tâm</b><small>Phật tử tập sự · Cấp 1</small></div><button id="editName" aria-label="Đổi tên">✎</button></div>
+    <div class="progress-label"><span>Công đức hôm nay</span><b id="progressText">0 / 100</b></div><div class="progress"><i id="progressBar"></i></div>
+    <div class="quest-title">NHIỆM VỤ HÔM NAY <span>1/3</span></div>
+    <button class="quest" data-action="bow"><span class="quest-icon">🙏</span><span><b>Lễ Phật thành tâm</b><small>Thực hiện 1 lần lễ Phật</small></span><em id="questBow">○</em></button>
+    <button class="quest" data-action="meditate"><span class="quest-icon">🧘</span><span><b>Tĩnh tâm đôi phút</b><small>Ngồi thiền tại chính điện</small></span><em id="questMeditate">○</em></button>
+    <button class="quest" data-action="beads"><span class="quest-icon">📿</span><span><b>Lần chuỗi niệm Phật</b><small>Chậm rãi và an nhiên</small></span><em id="questBeads">○</em></button>
+    <div class="panel-note">“Tâm an, vạn sự an.”<small>— Chùa An Nhiên</small></div>
+  </aside>
+
+  <aside class="right-panel">
+    <div class="panel-title">HOẠT ĐỘNG <button id="closeActions">×</button></div>
+    <button class="action" data-action="bow"><span>🙏</span><b>Lễ Phật</b><small>Chắp tay cúi lạy</small></button>
+    <button class="action" data-action="meditate"><span>🧘</span><b>Thiền định</b><small>Ngồi yên tĩnh tâm</small></button>
+    <button class="action" data-action="beads"><span>📿</span><b>Lần tràng hạt</b><small>Niệm Phật an nhiên</small></button>
+    <button class="action" data-action="incense"><span>🪔</span><b>Dâng hương</b><small>Gửi một lời nguyện</small></button>
+    <button class="action" data-action="bell"><span>🔔</span><b>Thỉnh chuông</b><small>Nghe tiếng chuông chùa</small></button>
+    <div class="disclaimer">Điểm công đức chỉ là điểm trải nghiệm trong trò chơi, không đại diện cho công đức hay việc tu tập ngoài đời thực.</div>
+  </aside>
+
+  <div class="bottom-center"><div class="interaction" id="interaction">Đang ở chính điện · Hãy chọn một hoạt động</div><div class="quick-actions"><button data-action="bow">🙏 <span>Lễ Phật</span></button><button data-action="meditate">🧘 <span>Thiền</span></button><button data-action="beads">📿 <span>Tràng hạt</span></button><button data-action="incense">🪔 <span>Dâng hương</span></button></div></div>
+  <div class="toast" id="toast"></div>
+  <div class="modal" id="nameModal"><div class="modal-card"><div class="lotus-big">🪷</div><h2>Chào mừng đến Chùa An Nhiên</h2><p>Hãy chọn một pháp danh để bắt đầu hành trình tĩnh tâm.</p><input id="nameInput" maxlength="16" value="Thiện Tâm" /><button id="startBtn">Bước vào chính điện</button><small>Không cần đăng ký · Trải nghiệm miễn phí</small></div></div>
+  <div class="mobile-controls"><button data-move="forward">▲</button><div><button data-move="left">◀</button><button data-move="back">▼</button><button data-move="right">▶</button></div></div>
+  <script type="module" src="./game.js"></script>
+</body>
+</html>
