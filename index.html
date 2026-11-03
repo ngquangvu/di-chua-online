@@ -45,6 +45,16 @@
   <div class="toast" id="toast"></div>
   <div class="modal" id="nameModal"><div class="modal-card"><div class="lotus-big">🪷</div><h2>Chào mừng đến Chùa An Nhiên</h2><p>Hãy chọn một pháp danh để bắt đầu hành trình tĩnh tâm.</p><input id="nameInput" maxlength="16" value="Thiện Tâm" /><button id="startBtn">Bước vào chính điện</button><small>Không cần đăng ký · Trải nghiệm miễn phí</small></div></div>
   <div class="mobile-controls"><button data-move="forward">▲</button><div><button data-move="left">◀</button><button data-move="back">▼</button><button data-move="right">▶</button></div></div>
-  <script type="module" src="./game.js"></script>
+ 
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
+  }
+}
+</script>
+
+<script type="module" src="./game.js"></script>
+
 </body>
 </html>
